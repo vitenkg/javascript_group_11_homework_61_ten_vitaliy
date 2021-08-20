@@ -8,7 +8,6 @@ import DisplayInfo from "../../Component/DisplayInfo/DisplayInfo";
 const Country = () => {
     const [countries, setCountries] = useState(null);
     const [countryInfo, setCountryInfo] = useState(null);
-    const [borders, setBorders] = useState(null);
 
     useEffect(() => {
         const fetchData = async () => {
@@ -29,7 +28,6 @@ const Country = () => {
         const fetchData = async () => {
             const response = await axios.get(COUNTRY_URL + alfa)
             setCountryInfo(response.data);
-            console.log(response.data);
         };
         fetchData().catch(e => console.log(e));
     };
