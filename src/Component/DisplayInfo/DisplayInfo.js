@@ -32,7 +32,7 @@ const DisplayInfo = props => {
             <p>Столица {props.CountryInfo.capital}</p>
             <p>Регион {props.CountryInfo.region}</p>
             <p>Насаление {props.CountryInfo.population} чел</p>
-            {borders && (<ul>{borders.map(border => {
+            {borders && (<ul>{borders.length > 0 ? 'Граничит с:' : null}{borders.map(border => {
                 let i = 0;
                 return (<li key={i++}><p>{border}</p></li>
             )})}</ul>)}
